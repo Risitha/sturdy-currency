@@ -9,9 +9,10 @@ phases:
   build:
     commands:
       - echo build process started now
-      - ng build --configuration=production
-  artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
-  base-directory: dist/sturdy-currency-dashboard
+      - ng build
+  post_build:
+    commands:
+      - echo build process finished, we should uplload to S3 now
+      - cd dist/sturdy-currency-dashboard
+      - ls -la
+      - aws s3 sync --delete "s3://sturdy-currency"
