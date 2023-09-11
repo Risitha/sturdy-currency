@@ -14,4 +14,4 @@ phases:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/your-app-name
+  base-directory: dist/sturdy-currency-dashboard
