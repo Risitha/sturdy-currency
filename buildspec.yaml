@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18.10.0
+      nodejs: 18.x
     commands:
       - echo install process started
       - npm install && npm install -g @angular/cli
