@@ -3,7 +3,7 @@ version: 0.1
 phases:
   install:
     runtime-versions:
-      nodejs: 18.10.0
+      nodejs: 16
     commands:
       - echo installing yarn...
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
