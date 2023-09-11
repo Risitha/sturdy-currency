@@ -3,8 +3,9 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - nvm install 16.13.0
-      - nvm use 16.13.0
+      # Install Node.js 16.x
+      - curl -sL https://deb.nodesource.com/setup_16.x | bash -
+      - apt-get install -y nodejs
       - npm install -g @angular/cli
       - npm install
   build:
