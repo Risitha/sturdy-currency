@@ -16,3 +16,8 @@ phases:
       - cd dist/sturdy-currency-dashboard
       - ls -la
       - aws s3 sync --delete . s3://sturdy-currency
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist/sturdy-currency-dashboard
