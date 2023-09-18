@@ -1,8 +1,37 @@
+<div class="background-image">
 <div class="page-header">
-  <h1>Currency Converter</h1>
+  <h1>Sturdy Currency</h1>
 </div>
 
-<mat-grid-list cols="3" rowHeight="2:1">
+<div class="page-body">
+  <mat-card class="card">
+    <mat-grid-list cols="3" rowHeight="2:1">
+      <mat-grid-tile>
+        <div class="input-row">
+          <mat-label class="label">Amount</mat-label>
+          <input class="input" placeholder="Enter Amount" [(ngModel)]="amount">
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="input-row">
+          <mat-label class="label">From</mat-label>
+          <mat-select class="input" placeholder="Select Currency" [(ngModel)]="selectedFromCurrency">
+            <mat-option *ngFor="let currency of currencyList" [value]="currency">{{ currency }}</mat-option>
+          </mat-select>
+        </div>
+        <mat-icon aria-hidden="false" class="icon" fontIcon="compare_arrows"></mat-icon>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="input-row">
+          <mat-label class="label">To</mat-label>
+          <mat-select class="input" placeholder="Select Currency" [(ngModel)]="selectedToCurrency">
+            <mat-option *ngFor="let currency of currencyList" [value]="currency">{{ currency }}</mat-option>
+          </mat-select>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  
+<!-- <mat-grid-list cols="3" rowHeight="2:1">
   <mat-grid-tile>
     <div class="input-row">
       <mat-label class="label">Amount</mat-label>
@@ -25,26 +54,26 @@
       </mat-select>
     </div>
   </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
 
 <!-- Display the converted amount -->
 <div style="text-align: center;">
-<button mat-button (click)="getExchangeRates(); selectedFilter = '7d'; hasConvertButtonClicked = true;">Convert</button>
+<button class="btn" mat-button (click)="getExchangeRates(); selectedFilter = '7d'; hasConvertButtonClicked = true;">Convert</button>
 </div>
 
 
-
-
 <!-- Separate mat-grid-list for vertical labels -->
-<mat-grid-list cols="1" rowHeight="5:1">
-  <mat-grid-tile>
+<!-- <mat-grid-list cols="1" rowHeight="5:1">
+  <mat-grid-tile> -->
     <div class="vertical-labels">
       <mat-label class="conversion-label" *ngIf="convertedAmount !== null">{{amount}} {{selectedFromCurrency}} = {{ convertedAmount | number }} {{selectedToCurrency}}</mat-label>
       <mat-label class="conversion-label" *ngIf="convertedAmount !== null && amount !== 1">1 {{selectedFromCurrency}} = {{exchangeRate}} {{selectedToCurrency}}</mat-label>
       <!-- <mat-label class="conversion-label">1 {{selectedToCurrency}} = 0.2345 AUD</mat-label> -->
     </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  <!-- </mat-grid-tile>
+</mat-grid-list> -->
+</mat-card>
+
 
 <div style="text-align: center;" *ngIf="hasConvertButtonClicked">
   <button  mat-button (click)="fetchHistoricalRates('7d')">7 Days</button>
@@ -71,6 +100,6 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
 </div>
-
-
+</div>
+</div>
 <!-- <router-outlet></router-outlet> -->

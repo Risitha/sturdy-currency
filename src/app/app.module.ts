@@ -16,7 +16,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { ApiInterceptor } from '../middleware/api-interceptor.service';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -36,7 +36,8 @@ import { ApiInterceptor } from '../middleware/api-interceptor.service';
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatIconModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

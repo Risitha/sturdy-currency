@@ -4,6 +4,7 @@ import * as Highcharts from 'highcharts';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { CURRENCIES } from 'src/assets/currencies';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
