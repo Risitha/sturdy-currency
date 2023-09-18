@@ -3,14 +3,14 @@
 
 .page-header {
   /* background-color: #3498db; Background color for the header */
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   padding: 20px; /* Spacing around the header content */
   z-index: 100;
   text-align: center; /* Center-align the title */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for the header */
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); Optional shadow for the header */
   /* background-color: black; */
 }
 
@@ -88,7 +88,7 @@ body {
   }
 
   .btn {
-    background-color: aliceblue;
+    background-color: rgb(188, 220, 248);
   }
 
   .icon {

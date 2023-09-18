@@ -1,6 +1,6 @@
 <div class="background-image">
 <div class="page-header">
-  <h1>Sturdy Currency</h1>
+  <h1>Sturdy Currency Dashboard</h1>
 </div>
 
 <div class="page-body">
@@ -30,36 +30,12 @@
         </div>
       </mat-grid-tile>
     </mat-grid-list>
-  
-<!-- <mat-grid-list cols="3" rowHeight="2:1">
-  <mat-grid-tile>
-    <div class="input-row">
-      <mat-label class="label">Amount</mat-label>
-      <input class="input" placeholder="Enter Amount" [(ngModel)]="amount">
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div class="input-row">
-      <mat-label class="label">From</mat-label>
-      <mat-select class="input" placeholder="Select Currency" [(ngModel)]="selectedFromCurrency" >
-        <mat-option *ngFor="let currency of currencyList" [value]="currency">{{ currency }}</mat-option>
-      </mat-select>
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div class="input-row">
-      <mat-label class="label">To</mat-label>
-      <mat-select class="input" placeholder="Select Currency" [(ngModel)]="selectedToCurrency" >
-        <mat-option *ngFor="let currency of currencyList" [value]="currency">{{ currency }}</mat-option>
-      </mat-select>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list> -->
 
 <!-- Display the converted amount -->
 <div style="text-align: center;">
 <button class="btn" mat-button (click)="getExchangeRates(); selectedFilter = '7d'; hasConvertButtonClicked = true;">Convert</button>
 </div>
+
 
 
 <!-- Separate mat-grid-list for vertical labels -->
